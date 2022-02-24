@@ -1,0 +1,25 @@
+.mainBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.644);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.modalInner {
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}

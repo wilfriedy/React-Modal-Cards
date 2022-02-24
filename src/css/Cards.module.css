@@ -1,0 +1,18 @@
+.mainBox {
+  padding: 15px 20px;
+}
+
+.containerCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 1rem;
+}
+
+.cards_box {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid;
+}

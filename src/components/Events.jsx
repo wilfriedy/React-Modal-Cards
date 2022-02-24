@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Card from "./Card";
+import Modal from "./Modal";
 
 export default function Events() {
   const [events, setEvents] = useState([
@@ -52,12 +53,22 @@ export default function Events() {
   ]);
 
   const handleClick = (id) => {
+    // setEvents((prev) => (prev = !prev));
+    //   show = !show;
+    // setEvents(show);
+    setEvents((prev) => {
+      return prev.filter((event) => id !== event.id);
+    });
+
+    //   console.log(events)
     console.log(id);
+    // console.log(show);
   };
 
   return (
     <div>
       <Card eventsdata={events} handleClick={handleClick} />;
+      <Modal />
     </div>
   );
 }

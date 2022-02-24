@@ -1,11 +1,12 @@
 import React from "react";
+import styles from "../css/Cards.module.css";
 
 export default function Card({ eventsdata, handleClick }) {
   return (
-    <div className="cards-contain">
+    <div className={styles.containerCards}>
       {eventsdata.map((event) => {
         return (
-          <div className="box" key={event.id}>
+          <div className={styles.cards_box} key={event.id}>
             <h2 className="title">{event.title}</h2>
             <b className="author">{event.author}</b>
             <p className="passage">{event.passage}</p>
@@ -15,7 +16,7 @@ export default function Card({ eventsdata, handleClick }) {
               }}
               className="read-more"
             >
-              Read More
+              Close
             </button>
           </div>
         );
