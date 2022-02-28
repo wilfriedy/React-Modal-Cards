@@ -12,7 +12,6 @@ export default function Events() {
       brief: "Lorem ipsum dolor sit amet",
       passage:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum distinctio deleniti perspiciatis excepturi, cum ipsa veniam nisi dolor deserunt.",
-      showpop: false,
     },
     {
       id: uuidv4(),
@@ -21,7 +20,6 @@ export default function Events() {
       brief: "Lorem ipsum dolor sit amet",
       passage:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum distinctio deleniti perspiciatis excepturi, cum ipsa veniam nisi dolor deserunt.",
-      showpop: false,
     },
     {
       id: uuidv4(),
@@ -30,7 +28,6 @@ export default function Events() {
       brief: "Lorem ipsum dolor sit amet",
       passage:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum distinctio deleniti perspiciatis excepturi, cum ipsa veniam nisi dolor deserunt.",
-      showpop: false,
     },
     {
       id: uuidv4(),
@@ -39,7 +36,6 @@ export default function Events() {
       brief: "Lorem ipsum dolor sit amet",
       passage:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum distinctio deleniti perspiciatis excepturi, cum ipsa veniam nisi dolor deserunt.",
-      showpop: false,
     },
     {
       id: uuidv4(),
@@ -48,21 +44,13 @@ export default function Events() {
       brief: "Lorem ipsum dolor sit amet",
       passage:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum distinctio deleniti perspiciatis excepturi, cum ipsa veniam nisi dolor deserunt.",
-      showpop: false,
     },
   ]);
 
   const handleClick = (id) => {
-    // setEvents((prev) => (prev = !prev));
-    //   show = !show;
-    // setEvents(show);
     setEvents((prev) => {
       return prev.filter((event) => id !== event.id);
     });
-
-    //   console.log(events)
-    console.log(id);
-    // console.log(show);
   };
 
   return (
