@@ -47,6 +47,12 @@ export default function Events() {
     },
   ]);
 
+  const addEvents = (newEvents) => {
+    setEvents((prev) => {
+      return [...prev, newEvents];
+    });
+  };
+
   const handleClick = (id) => {
     setEvents((prev) => {
       return prev.filter((event) => id !== event.id);
@@ -56,7 +62,7 @@ export default function Events() {
   return (
     <div>
       <Card eventsdata={events} handleClick={handleClick} />;
-      <Modal />
+      <Modal addEvents={addEvents} />
     </div>
   );
 }

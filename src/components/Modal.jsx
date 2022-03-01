@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "../css/Modal.module.css";
+import Form from "./Form";
 
-export default function Modal() {
+export default function Modal({ addEvents }) {
   const [prompts, setPrompt] = useState(true);
   const handleClose = () => {
     setPrompt((prev) => {
@@ -14,14 +15,7 @@ export default function Modal() {
       {prompts && (
         <div className={styles.mainBg}>
           <div className={styles.modalInner}>
-            <h2>Hello welcome to the events</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              amet inventore qui! Quibusdam totam nostrum culpa repudiandae
-              aspernatur officia distinctio est aliquam libero! Aliquam, ullam!
-              Repellat aliquam autem consequatur amet!
-            </p>
-            <button onClick={handleClose}>Close</button>
+            <Form addEvents={addEvents} closeModal={handleClose} />
           </div>
         </div>
       )}
